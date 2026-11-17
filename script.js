@@ -1,46 +1,19 @@
-const apple = new Image();
-apple.src = "./ressources/memory-legume/1.svg";
+const legumes = ["1.svg", "2.svg", "3.svg", "4.svg", "5.svg", "6.svg"];
+const cartes = legumes.concat(legumes);// chaque image 2 fois = 12 cartes
 
-const banane = new Image();
-banane.src = "./ressources/memory-legume/2.svg";
+function mixcards(tableau){
+//math.floor(math.random)
 
-const broccoli = new Image();
-broccoli.src = "./ressources/memory-legume/3.svg";
+//melanger des cartes
+}
 
-const cherry = new Image();
-cherry.src = "./ressources/memory-legume/4.svg";
+let coups = 0,
+const bouton = document.getElementById("monBouton");
 
-const pepper = new Image();
-pepper.src = "./ressources/memory-legume/5.svg";
+//retourner une carte au clic
+for (let i =0; i < 12, i++){
+  document.getElementById(i).addEventListener("click", function(){
+      document.getElementById(image_+i)
 
-const strawberry = new Image();
-strawberry.src = "./ressources/memory-legume/6.svg"
-
-const legumes = ["apple", "banane", "broccoli", "cherry", "pepper", "strawberry"]
-
-let joueur = 1;
-
-shuffleCards legumes
-let coups = 0;
-const bouton = document.getElementById('card');
-
-
-<script>
-document.querySelectorAll('.card').forEach(card => {
-card.addEventListener('click', function() {
-this.classList.toggle('flipped');
-});
-});
-</script>
-
-function init() {
-  $("td").on("click", function () {
-    if ($(this).find("img").attr("src") !== undefined) {
-      return;
-    }
-    if (joueur === 1) {
-      $(this).find("img").attr("src");
-      
-    }
   });
 }
