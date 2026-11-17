@@ -1,26 +1,108 @@
 body {
     font-family: Arial, sans-serif;
+    min-height: 100vh;
     margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, #70ce31, #657c80);
+    padding: 20px;
+    background: linear-gradient(to bottom, #c0ff72, #7b68ee);
+    background-attachment: fixed
+    box-sizing: border-box;
 }
 
-.image-memory {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+h1{
+    margin: 0;
+    padding: 40px;  20 px;
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: 300;
+
+}
+
+nav{
+    display: inline-block;
+    padding: 0% 10px;
+    margin-left: 10;
+    margin-bottom: 15px;
+    background-color: #222;
+    border: 1px solid #ccc;
+}
+
+main{
+    background-color: black;
+    color: white;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+main img {
+    display: block;
+    margin: 20px auto; /* Centrer l'image horizontalement */
+    max-width: 100%;
     height: auto;
-    width: 10%; /* Remplacez par la largeur souhaitée */
   
 }
 
-.menu principal {
+nav ul{
     display: flex;
-    gap: 20px;               /* Ajoute un espace de 20px entre chaque lien */
-    padding: 0;              /* Retire le décalage interne par défaut */
-    margin: 0;  
-    justify-content: flex-start;
-    align-items: center;
-    height: 60px;
-    background-color: #333;
+    list-style: none;
+    padding: 0;               /* Ajoute un espace de 20px entre chaque lien */             
+    margin: 0;        /* Ajoute un espace en bas du menu */
+}
+
+nav a{
+display: block;
+padding: 15px 20px;
+color: white;
+text-decoration: none;
+background-color: black;
+font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main.inscription{
+    display: flex;
+    justify-content: center;
+}
+legend{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 15px;
+    margin: auto;
+}
+
+
+fieldset{
+    border: none;
+    margin: 0;
+    padding: 0;
+    min-width: none;
+}
+fieldset label{
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    padding: 10px;
+    outline: none;
+    font-size: 16;
+}
+.boutons{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
 }

@@ -8,9 +8,22 @@
 </head>
 <body>
     <h1>Eni-Memory-S'inscrire</h1>
-    <fieldset>
-      <legend></legend>
+
+    <nav id="menu-principal">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="inscription.html">S'inscrire</a></li>
+                <li><a href="connexion.html">Se connecter</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="jouer.html">Jouer</a></li>
+            </ul>
+        </nav>
+
+    <main class="inscription">
       <form action="" method="post">
+        <fieldset>
+          <legend>Inscrivez-vous</legend>
+      
         <label for="nom">Nom d'utilisateur* :</label>
         <input
           type="text"
@@ -19,10 +32,9 @@
           autofocus
           required
           placeholder="3 caractères minimum"
-          pattern="[A-Za-z]{2,}"
-          title="Saisissez votre nom (2 caractères min.)"
+          pattern="[A-Za-z]{3,}"
+          title="Saisissez votre nom (3 caractères min.)"
         />
-        <br />
       
         <label for="email">Entrez votre email : </label>
         <input
@@ -32,7 +44,7 @@
           placeholder="Votre email"
           title="Saisissez votre adresse email"
         />
-        <br />
+        
         
         <label for="motdePasse">Mot de passe :</label>
         <input
@@ -44,23 +56,23 @@
           title="Saisissez votre mot de passe de minimum 8 caractères comportant
           des lettres minuscules et majuscules et des chiffres"
         />
-        <br />
       
-        <label for="motdePasse">Confirmez le mot de passe :</label>
+        <label for="confirmation">Confirmez le mot de passe :</label>
         <input
           type="password"
-          id="motdePasse"
-          name="motdePasse"
+          id="confirmation"
+          name="confirmation"
           placeholder="Confirmer le mot de passe"
           pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
           title="Saisissez votre mot de passe de minimum 8 caractères comportant
           des lettres minuscules et majuscules et des chiffres"
-        />
-        <br />
-        <br />
-        <input type="submit" value="Création du compte" />
-        <input type="reset" value="Annuler" />
-        </form>
-    </fieldset>
+          />
+        <div class ="boutons">
+          <input type="submit" value="Création du compte" />
+          <input type="reset" value="Annuler" />
+        </div>
+        </fieldset>
+      </form>
+    </main>
   </body>
 </html>
