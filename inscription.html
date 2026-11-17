@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eni Memory s'inscrire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Eni-Memory-S'inscrire</h1>
+    <fieldset>
+      <legend></legend>
+      <form action="" method="post">
+        <label for="nom">Nom d'utilisateur* :</label>
+        <input
+          type="text"
+          id="nom"
+          name="nom"
+          autofocus
+          required
+          placeholder="3 caractères minimum"
+          pattern="[A-Za-z]{2,}"
+          title="Saisissez votre nom (2 caractères min.)"
+        />
+        <br />
+      
+        <label for="email">Entrez votre email : </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Votre email"
+          title="Saisissez votre adresse email"
+        />
+        <br />
+        
+        <label for="motdePasse">Mot de passe :</label>
+        <input
+          type="password"
+          id="motdePasse"
+          name="motdePasse"
+          placeholder="Votre mot de passe"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          title="Saisissez votre mot de passe de minimum 8 caractères comportant
+          des lettres minuscules et majuscules et des chiffres"
+        />
+        <br />
+      
+        <label for="motdePasse">Confirmez le mot de passe :</label>
+        <input
+          type="password"
+          id="motdePasse"
+          name="motdePasse"
+          placeholder="Confirmer le mot de passe"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          title="Saisissez votre mot de passe de minimum 8 caractères comportant
+          des lettres minuscules et majuscules et des chiffres"
+        />
+        <br />
+        <br />
+        <input type="submit" value="Création du compte" />
+        <input type="reset" value="Annuler" />
+        </form>
+    </fieldset>
+  </body>
+</html>
