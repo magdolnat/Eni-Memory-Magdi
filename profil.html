@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eni - MEMORY - Profil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Eni - MEMORY - Profil</h1>
+
+    <nav id="menu-principal">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="inscription.html">S'inscrire</a></li>
+                <li><a href="connexion.html">Se connecter</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="jouer.html">Jouer</a></li>
+            </ul>
+        </nav>
+            <div class = "profil-header">
+                <div class="profil-avatar">
+                    <img src="./ressources/question.svg" alt="">
+                </div>
+            </div>
+
+    <main class="profil">
+        <form action="" method="get">
+           <fieldset>
+        <label for="nom">Nom d'utilisateur :</label>
+        <input
+          type="text"
+          id="nom"
+          name="nom"
+          autofocus
+          required
+          placeholder="ddd"
+          pattern="[A-Za-z]{3,}"
+          title="Saisissez votre nom (3 caractères min.)"
+        />
+      
+        <label for="email">Email : </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="dd@dd.fr"
+          title="Saisissez votre adresse email"
+             /></fieldset>
+            </form>
+        </main>     
+         <label for="choix du memory">Choix du Memory</label>
+         <select name="choix" id="choix">
+         <option value="">--Veuillez choisir une option--</option>
+         <option value="memory-legume">memory-legume</option>
+         <option value="dinosauresAvecNom">dinosauresAvecNom</option>
+         <option value="dinosaures">dinosaures</option>
+         <option value="chiens">chiens</option>
+         <option value="animauxdomestiques">animauxdomestiques</option>
+         <option value="animauxAnimes">animauxAnimes</option>
+         <option value="animaux">animaux</option>
+         <option value="alphabet-scrabble">alphabet-scrabble</option>
+         </select>
+    </body>
+</html>
