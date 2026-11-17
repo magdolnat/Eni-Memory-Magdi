@@ -18,3 +18,4 @@ strawberry.src = "./ressources/memory-legume/6.svg"
 
 let joueur = 1;
 
+

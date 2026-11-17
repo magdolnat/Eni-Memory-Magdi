@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     min-height: 100vh;
@@ -5,12 +9,11 @@ body {
     padding: 20px;
     background: linear-gradient(to bottom, #c0ff72, #7b68ee);
     background-attachment: fixed
-    box-sizing: border-box;
 }
 
 h1{
     margin: 0;
-    padding: 40px;  20 px;
+    padding: 40px  20 px;
     text-align: center;
     color: white;
     font-size: 3rem;
@@ -129,9 +132,9 @@ label [for="choix du memory"]{
     
     background-color: black;
     color: white;
-    width: 600px;
+    max-width: 600px;
     height: 500px;
-    margin: 20 px auto;
+    margin: 20px auto;
     padding: 20px;
     box-sizing: border-box;
     display: flex;
@@ -159,7 +162,8 @@ td:hover {
 }
  
 img {
-    padding: 20px;
+    max-width: 100%;
+    height: auto;
 }
 .intro{
     display: flex;
