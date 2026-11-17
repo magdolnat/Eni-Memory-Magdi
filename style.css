@@ -33,9 +33,9 @@ nav{
 main{
     background-color: black;
     color: white;
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
+    max-width: 600px; /*la largeur maximale de la carte*/
+    margin: auto; /*la carte centrée dans ka page*/
+    padding: 20px;/*l’espace entre le bord de la carte et son contenu*/
     border-radius: 15px;
 }
 
@@ -110,38 +110,55 @@ input[type="password"]{
     margin-top: 30px;
 }
 
-label [for="choix du memory"]{
-    font-family: sans-serif;
-    font-size: 1em;
-    padding-right: 10px;
-}
-#choix{
-    font-size: 0.9rem;
-    padding: 2px 5px;
-
-}
-.profil-avatar img{
-    object-fit: cover; /* Évite la déformation de l'image */
+label {
     display: block;
-    width: 300px; /* Définissez une largeur */
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 15px;
+}
+.profil h2{
+    text-align: center;
+}
+.profil-header img{
+    display: block;
+    width: 60px; 
+    height: 60px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 1px solid#888;
 }
 .profil{
     
     background-color: black;
     color: white;
-    max-width: 600px;
+    max-width: 400px;
     height: 500px;
     margin: 20px auto;
     padding: 20px;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
+    border-radius: 12px;
 }
+fieldset{
+    border: none;
+    padding: 0;}
+
+
+    .btn-enregistrer {
+    background: #fffbd5;
+    border: 1px solid #ccc;
+}
+.intro h3 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin: 8px 0;
+}
+
+#monBouton {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 0.9rem;
+    cursor: default;
+}
+
 table{
     display: flex;
     justify-content: center;
@@ -161,7 +178,7 @@ td:hover {
     border: 1px black solid;
 }
  
-img {
+td img {
     max-width: 100%;
     height: auto;
 }
