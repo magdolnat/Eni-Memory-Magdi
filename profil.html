@@ -18,13 +18,14 @@
                 <li><a href="jouer.html">Jouer</a></li>
             </ul>
         </nav>
+        <main class="profil"></main>
+        <h2>Profil</h2>
             <div class = "profil-header">
                 <div class="profil-avatar">
                     <img src="./ressources/question.svg" alt="">
                 </div>
             </div>
 
-    <main class="profil">
         <form action="" method="get">
            <fieldset>
         <label for="nom">Nom d'utilisateur :</label>
@@ -48,7 +49,7 @@
           title="Saisissez votre adresse email"
              /></fieldset>
             </form>
-        </main>     
+             
          <label for="choix du memory">Choix du Memory</label>
          <select name="choix" id="choix">
          <option value="">--Veuillez choisir une option--</option>
@@ -61,5 +62,13 @@
          <option value="animaux">animaux</option>
          <option value="alphabet-scrabble">alphabet-scrabble</option>
          </select>
+         <br>
+         <label for="size">Taille du Memory</label>
+         <select name="taille" id="taille">
+            <option value="4*3">4*3</option>
+         </select>
+         <button type="submit" class="btn-entregistrer">Enregistrez Option</button>
+
+         </main>
     </body>
 </html>

@@ -117,3 +117,51 @@ label [for="choix du memory"]{
     padding: 2px 5px;
 
 }
+.profil-avatar img{
+    object-fit: cover; /* Évite la déformation de l'image */
+    display: block;
+    width: 300px; /* Définissez une largeur */
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.profil{
+    
+    background-color: black;
+    color: white;
+    width: 600px;
+    height: 500px;
+    margin: 20 px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+table{
+    display: flex;
+    justify-content: center;
+    margin:30px 0 30px 0;
+}
+
+td{
+    height: 15vh;
+    width: 15vh;
+    background-color: rgba(200, 200, 200, 0.2);
+    text-align: center;
+    border: 1px solid white;
+    border-collapse: collapse;
+    cursor: pointer;
+}
+td:hover {
+    border: 1px black solid;
+}
+ 
+img {
+    padding: 20px;
+}
+.intro{
+    display: flex;
+    flex-direction: column; /* Empile les éléments verticalement */
+}
