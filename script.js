@@ -16,6 +16,31 @@ pepper.src = "./ressources/memory-legume/5.svg";
 const strawberry = new Image();
 strawberry.src = "./ressources/memory-legume/6.svg"
 
+const legumes = ["apple", "banane", "broccoli", "cherry", "pepper", "strawberry"]
+
 let joueur = 1;
 
+shuffleCards legumes
+let coups = 0;
+const bouton = document.getElementById('card');
 
+
+<script>
+document.querySelectorAll('.card').forEach(card => {
+card.addEventListener('click', function() {
+this.classList.toggle('flipped');
+});
+});
+</script>
+
+function init() {
+  $("td").on("click", function () {
+    if ($(this).find("img").attr("src") !== undefined) {
+      return;
+    }
+    if (joueur === 1) {
+      $(this).find("img").attr("src");
+      
+    }
+  });
+}
