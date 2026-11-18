@@ -190,24 +190,4 @@ td img {
     text-align: center;     /* Centre le texte à l'intérieur de chaque ligne si besoin */
     margin: 5px 0;
 }
-.card {
-perspective: 1000px;
-cursor: pointer;
-box-shadow: none !important;
-}
-.content_img {
-transform-style: preserve-3d;
-transition: transform 0.5s;
-}
-.content_photo::before{
-transform: rotateY(0deg);
-}
-.card.flipped .content_photo::before{
-transform: rotateY(180deg);
-}
-.card.flipped .content_img {
-transform: rotateY(180deg);
-}
-.card.flipped .content_photo img {
-transform: rotateY(180deg);
-}
+
