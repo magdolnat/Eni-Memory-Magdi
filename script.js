@@ -32,6 +32,7 @@ const cases = document.querySelectorAll("#plateau td");
 //td:lacase html , index: numéro de position à jusqu'à 11, 
 cases.forEach((td, index) => {
   //va chercher dans la liste celle qui a le même numéro td=0 index =0 carte =jeutable=0
+  //carte = nom du légume caché
   const carte = jeuTable[index];
 
   td.addEventListener("click", function (){
@@ -42,3 +43,8 @@ cases.forEach((td, index) => {
   });
 });
 
+//compter des coups
+let coups = 0;
+const bouton = document.getElementById("monBouton");
+    coups++;
+    bouton.textContent = "Nombre de coup (" + coups + ")";
