@@ -7,11 +7,10 @@
 // Déclaration des tableaux (avec des paires identiques pour un jeu de Memory)
 const cartes = ["1", "2", "3", "4", "5", "6"];
 const cartesDouble = ["1", "2", "3", "4", "5", "6"];
-let bloque = false;
-let premiereCase = null;
-let secondCase = null;
-let firstCard = null;
-let secondCard = null;
+const table = [];
+let joueur = 1;
+let coups = 0;
+const bouton = document.getElementById("monBouton");
 
 // Concaténation
 const jeuTable = cartes.concat(cartesDouble);
@@ -34,33 +33,84 @@ console.log("Tableau mélangé :" , jeuTable);
 const cases = document.querySelectorAll("#plateau td");
 // Boucle sur chaque case (td) et son index • 
 // parcourt chaque <td> trouvée et remplace son texte par la valeur correspondante du tableau jeuTable
-//td:lacase html , index: numéro de position à jusqu'à 11, 
+ 
 //cases.forEach((td, index) => {
   //va chercher dans la liste celle qui a le même numéro td=0 index =0 carte =jeutable=0
   //carte = nom du légume caché
-
-
-//---------------------------------------jeu 
 // ECMAScript 2015 (ES6) a ajouté les fonctions fléchées dans lesquelles this correspond à la valeur du contexte englobant
 
 
-cases.forEach((td, index) => {
-  const carte = jeuTable[index];
+//---------------------------------------jeu 
+let bloque = false; //on peut cliquer//
+function cliquer(td, index){
+  //if bloque === true return arrête la fonstion cliquer
+  if (bloque) return;
+  //on ignore le clic si la carte est déjà retournée
+  if (td.classList.contains("matched")) return;
+  //ignore le clic si on a déjà une carte retournée - pour éviter de compter 2fois
+  if (table.length === 1 && table[0] === index) return;
+  td.querySelector("img").src = "./ressources/memory-legume/" + jeuTable[index] + ".svg";
+  //ajoute le numéro de la case à la liste table, pour se souvenir des cartes retourné
+  table.push(index);
 
-  td.addEventListener("click", function () {
+  if (table.length === 2) {
+    //la premier case cliquée table0
+    const a = table [0];
+    const b = table [1];
+
+        coups++;
+        bouton.textContent = "Nombre de coup (" + coups + ")";
+    
+      if(jeuTable[a] === jeuTable[b]){
+          cases[a].classList.add ("matched");
+          cases[b].classList.add ("matched");
+          table.length = 0; //pour vider la liste
+      }else {
+        console.log("try again");
+        bloque = true;
+        setTimeout(function(){
+          cases[a].querySelector("img").src = "./ressources/question.svg";
+          cases[b].querySelector("img").src = "./ressources/question.svg";
+          //vider la table
+          table.length = 0;
+          bloque = false;
+        }, 5000);
+      }
+        
+  }
+}
+cases.forEach((td, index) =>{
+  td.addEventListener("click", function(){
+    cliquer(td,index);
+  });
+
+});
+    //reinitialiser 
+    //let timer = null,
+    //function relancer(){
+    //clearTimeout(timer)
+    //table.lenght = 0,
+    //bloque = false;
+    //coup = 0;
+    //bouton.textContent = "Nombre de coup (0)";}
+
+  //cases.forEach((td, index) => {
+  //const carte = jeuTable[index];
+
+  //td.addEventListener("click", function () {
     // On ignore le clic dans ces cas
-    if (bloque) return;
-    if (td === premiereCase) return;
-    if (td.classList.contains("trouvee")) return;
+    //if (bloque) return;
+    //if (td === premiereCase) return;
+    //if (td.classList.contains("trouvee")) return;
 
     // On montre la carte
-    const image = td.querySelector("img");
-    image.src = "./ressources/memory-legume/" + carte + ".svg";
+    //const image = td.querySelector("img");
+    //image.src = "./ressources/memory-legume/" + carte + ".svg";
 
     // 1re carte : on la retient et on s'arrête
     //aucun carte n'a été retourné encore
   
-    if (firstCard === null){
+    /*if (firstCard === null){
         premiereCase = td;
         firstCard = carte;
       return
@@ -86,16 +136,11 @@ cases.forEach((td, index) => {
 
 
 /*let joueur = 1;
+let coup = 0
+const bouton = document.getElementById("monBouton");
 
-let firstcard 
-let secondcard 
-//let firstcase 
-//let secondcase 
-//trouver paires correspondance
-//let matchcards 
 const blocks = false
 let cardreturned = []
-
 
 function blockcards(){
     if (blocks || cardreturned.classList.contains ('retournée')){
@@ -130,7 +175,7 @@ document.querySelector("#monBouton").addEventListener("click", function match(ev
   } else {
     setTimeout(() => {
       console.log("Cartes retournées");
-      // Ajoute ici le code pour cacher à nouveau les cartes (ex: classList.remove('flipped'))
+        classList.remove('flipped'))
     }, 5000);
   }
 });
