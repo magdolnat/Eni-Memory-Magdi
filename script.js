@@ -38,15 +38,7 @@ const cases = document.querySelectorAll("#plateau td");
 //cases.forEach((td, index) => {
   //va chercher dans la liste celle qui a le même numéro td=0 index =0 carte =jeutable=0
   //carte = nom du légume caché
-  //const carte = jeuTable[index];
 
-    //td.addEventListener("click", function (){
-    // console.log("Carte cliquée :", carte);
-
-    //const image = td.querySelector("img");
-    //image.src = "./ressources/memory-legume/" + carte + ".svg";
-    // });
-    //});
 
 //---------------------------------------jeu 
 // ECMAScript 2015 (ES6) a ajouté les fonctions fléchées dans lesquelles this correspond à la valeur du contexte englobant
@@ -104,11 +96,6 @@ let secondcard
 const blocks = false
 let cardreturned = []
 
-// la valeur est amenée à changer
-//firstcard = "carte";
-//firstcase = "td";
-//seconcard = "carte"
-//secondcase = "td"
 
 function blockcards(){
     if (blocks || cardreturned.classList.contains ('retournée')){
@@ -135,14 +122,6 @@ table.push ("carte cliquée")
 });
 
 
-
-
-
-  bloque 
-  if cartes idetique ("match")
-  alors table.lenght = 0;
-
-}
 
 document.querySelector("#monBouton").addEventListener("click", function match(event) {
   event.preventDefault();
