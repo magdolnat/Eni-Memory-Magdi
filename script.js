@@ -86,6 +86,23 @@ cases.forEach((td, index) =>{
   });
 
 });
+
+const restart = document.getElementById("recommancer");
+function recommancer(){
+  location.reload();
+
+}
+document.addEventListener("keydown", (event) => {
+  if (event.code === "Space") {
+    event.preventDefault();
+    recommancer();
+  }
+});
+// pour éviter que la barre d'espace ne fasse défiler la page web vers le bas au lieu de relancer la partie.//
+// Écoute du clic directement sur le <h3>
+  restart.addEventListener("click", recommancer);
+
+      
     //reinitialiser 
     //let timer = null,
     //function relancer(){
