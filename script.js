@@ -43,7 +43,7 @@ const cases = document.querySelectorAll("#plateau td");
 //---------------------------------------jeu 
 let bloque = false; //on peut cliquer//
 function cliquer(td, index){
-  //if bloque === true return arrête la fonstion cliquer
+  //if bloque === true return arrête la fonction cliquer 
   if (bloque) return;
   //on ignore le clic si la carte est déjà retournée
   if (td.classList.contains("matched")) return;
@@ -62,6 +62,7 @@ function cliquer(td, index){
         bouton.textContent = "Nombre de coup (" + coups + ")";
     
       if(jeuTable[a] === jeuTable[b]){
+        //.classList.add("matched") ajouter une ou plusieurs classes CSS à un élément HTML
           cases[a].classList.add ("matched");
           cases[b].classList.add ("matched");
           table.length = 0; //pour vider la liste

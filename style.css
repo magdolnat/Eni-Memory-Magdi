@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; :/* indique au navigateur de prendre en compte toute bordure et marge interne*/
 }
 
 body {
