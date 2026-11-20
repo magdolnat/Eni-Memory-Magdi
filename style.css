@@ -50,7 +50,7 @@ main img {
 nav ul{
     display: flex;
     list-style: none;
-    padding: 0;               /* Ajoute un espace de 20px entre chaque lien */             
+    padding: 0;        /* Ajoute un espace de 20px entre chaque lien */             
     margin: 0;        /* Ajoute un espace en bas du menu */
 }
 
